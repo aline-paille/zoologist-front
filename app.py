@@ -59,6 +59,8 @@ if st.button('Get Prediction'):
     if response.status_code != 200:
         st.write('Something went wrong during request ', response.status_code, response.text)
     else:
-        st.write(f'The current prediction is **{json.loads(response.text)["prediction"]}**.')
+        # prediction = json.loads(response.text)["prediction"]
+        prediction = response.json()["prediction"]
+        st.write(f'The current prediction is **{prediction}**.')
 else:
     st.write("You haven't una a prediction yet...")
