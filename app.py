@@ -47,9 +47,11 @@ params = {
 }
 
 # manage the click button action: get predition
+full_url = st.secrets["URL"] + "/predict"
+
 if st.button('Get Prediction'):
     response = requests.get(
-        url=st.secrets["URL"],
+        url=full_url,
         headers=HEADERS,
         params=params
     )
