@@ -4,10 +4,7 @@ import numpy as np
 import requests
 import json
 
-
 HEADERS = {'accept': '*/*'}
-URL = "https://zoo-api-456485587318.europe-west1.run.app/predict"
-
 
 """
 # Zoologist front
@@ -52,7 +49,7 @@ params = {
 # manage the click button action: get predition
 if st.button('Get Prediction'):
     response = requests.get(
-        url=URL,
+        url=st.secrets["URL"],
         headers=HEADERS,
         params=params
     )
