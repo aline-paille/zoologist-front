@@ -4,4 +4,6 @@ version = "0.1.0"
 description = "A Streamlit front-end for the Zoologist project"
 readme = "README.md"
 requires-python = ">=3.12.9"
-dependencies = requirements.txt
+dependencies = [
+    "streamlit>=1.67.0",
+]
